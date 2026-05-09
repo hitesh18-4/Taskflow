@@ -7,8 +7,8 @@
 
 ## 🚀 Live Demo
 
-**Live URL:** `https://YOUR-APP.up.railway.app`  
-**GitHub:** `https://github.com/YOUR-USERNAME/taskflow`
+**Live URL:** `taskflow-production-f926.up.railway.app`  
+**GitHub:** `https://github.com/hitesh18-4/Taskflow`
 
 ---
 
@@ -49,32 +49,6 @@
 - My Tasks panel (tasks assigned to you, across all projects)
 - Overdue tasks table with direct links
 - Recent activity feed
-
----
-
-## 🐛 Bug Fixes (v1.1)
-
-The following bugs were identified and resolved:
-
-### 1. Assignee validation rejected `null` — tasks saved without assignee silently
-**File:** `backend/routes/tasks.js`  
-The `express-validator` rule `body('assignee_id').optional().isInt()` rejected `null` values (sent when clearing an assignee) with a 400 validation error. Because the frontend didn't surface these errors visibly, tasks were silently created without an assignee even when one was selected.  
-**Fix:** Changed to `optional({ nullable: true }).isInt({ min: 1 })` and added explicit `parseInt` parsing of the value.
-
-### 2. Updating a task could not clear the assignee
-**File:** `backend/routes/tasks.js`  
-The SQL `CASE WHEN assignee_id IS NOT NULL THEN ? ELSE assignee_id END` logic in the `PUT` handler did not correctly handle `assignee_id: null` (unassign). Sending null would leave the old assignee in place.  
-**Fix:** Rewrote the update logic to track whether `assignee_id` was explicitly included in the request body (change intended) vs absent (leave unchanged), and handles null correctly to clear the field.
-
-### 3. "New Task" modal defaulted to Unassigned
-**File:** `frontend/src/pages/ProjectDetailPage.jsx`  
-`CreateTaskModal` initialised `assignee_id: ''` (Unassigned) so users had to manually select themselves, which most skipped. This caused the dashboard "Assigned to Me" counter to stay at 0.  
-**Fix:** The modal now defaults `assignee_id` to the currently logged-in user's ID. Users can still change it to any member or set it to Unassigned before saving.
-
-### 4. Dashboard showed no team-level assignment visibility
-**Files:** `backend/routes/dashboard.js`, `frontend/src/pages/DashboardPage.jsx`  
-The dashboard had no way to see how tasks were distributed across team members. The only assignment-related stat was "Assigned to Me", which only counted the logged-in user's own tasks.  
-**Fix:** Added a `tasksByAssignee` query to the dashboard API and a new **Tasks by Assignee** card in the UI showing every assigned member with a proportional bar of their active (non-done) task count vs total assigned.
 
 ---
 
@@ -269,6 +243,7 @@ railway up
 ## 📸 Screenshots
 
 > Add your screenshots here after deploying.
+<img width="1366" height="768" alt="Screenshot (36)" src="https://github.com/user-attachments/assets/53655c97-7ddf-4883-b106-1f8fdcbc9303" />
 
 ---
 
