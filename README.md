@@ -242,11 +242,11 @@ railway up
 
 ## 📸 Screenshots
 
-<img width="700" height="500" alt="Screenshot (45)" src="https://github.com/user-attachments/assets/66d5c65c-8413-4221-b19e-4ff35d9c7177" />
-<img width="700" height="500" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/c12f9083-3fc7-4b8a-8d0a-2300f7bb8988" />
-<img width="700" height="500" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/a15bcba0-611f-42df-a6fe-ef6bbc2f4897" />
-<img width="700" height="500" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/db1ebd08-d8a2-46d9-98b7-75bb57619841" />
-<img width="700" height="500" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/c3607074-7dd0-427c-88ba-4f48550ef697" />
+<img width="1000" height="500" alt="Screenshot (45)" src="https://github.com/user-attachments/assets/66d5c65c-8413-4221-b19e-4ff35d9c7177" />
+<img width="1000" height="500" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/c12f9083-3fc7-4b8a-8d0a-2300f7bb8988" />
+<img width="1000" height="500" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/a15bcba0-611f-42df-a6fe-ef6bbc2f4897" />
+<img width="1000" height="500" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/db1ebd08-d8a2-46d9-98b7-75bb57619841" />
+<img width="1000" height="500" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/c3607074-7dd0-427c-88ba-4f48550ef697" />
 
 
 ---
